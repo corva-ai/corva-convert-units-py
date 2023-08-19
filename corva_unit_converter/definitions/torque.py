@@ -64,7 +64,7 @@ rule = {
    "imperial": imperial,
    "_anchors": {
       "metric": {
-         "unit": "nm",
+         "unit": "Nm",
          "ratio": 0.73756214927727
       },
       "imperial": {
