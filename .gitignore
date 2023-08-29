@@ -1,0 +1,42 @@
+# Project
+/venv/
+*.secret
+*.db
+*.out
+*_org*.json
+/config/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Emacs
+*~
+\#*\#
+.\#*
+.DS_Store
+
+# Elixir
+_build/
+deps/
+*.beam
+*.swp
+*.swo
+*.mix-*
+*.ez
+*.log
+*.tmp
+.coverage
+
+#IntelliJ
+.idea/
+local_run.py
+*.zip
