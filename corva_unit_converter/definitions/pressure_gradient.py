@@ -9,6 +9,17 @@ metric = {
       "aliases": [
          "kPa/m"
       ]
+   },
+   "Pa/m": {
+      "name": {
+         "singular": "Pascal per meter",
+         "plural": "Pascals per meter",
+         "display": "Pa/m"
+      },
+      "to_anchor": 0.001,
+      "aliases": [
+         "Pa/m"
+      ]
    }
 }
 

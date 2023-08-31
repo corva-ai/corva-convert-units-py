@@ -9,6 +9,17 @@ metric = {
       "aliases": [
          "mm/rev"
       ]
+   },
+   "m/rev": {
+      "name": {
+         "singular": "Meter per Revolution",
+         "plural": "Meters per Revolution",
+         "display": "m/rev"
+      },
+      "to_anchor": 1000,
+      "aliases": [
+         "m/rev"
+      ]
    }
 }
 
