@@ -57,7 +57,7 @@ metric = {
         },
         "to_anchor": 60 / (2 * pi),
         "aliases": [
-            "radsec"
+            "radsec", "rad/s", "rad/sec"
         ]
     },
     "dega/s": {
