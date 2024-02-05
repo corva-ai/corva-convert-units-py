@@ -79,8 +79,8 @@ class Converter:
         if "anchor_shift" in destination["unit"]:
             result += destination["unit"]["anchor_shift"]
 
-        if "anchor_shift" in destination["unit"]:
-            result += destination["unit"]["anchor_shift"]
+        if "anchor_shift" in origin["unit"]:
+            result -= origin["unit"]["anchor_shift"]
 
         # Convert from one system to another
         if origin["system"] != destination["system"]:
