@@ -1,7 +1,7 @@
 import logging
 from typing import Dict, Union
 
-from corva_unit_converter import definitions
+from . import definitions
 
 measures = {
     "acoustic_slowness": definitions.acoustic_slowness.rule,

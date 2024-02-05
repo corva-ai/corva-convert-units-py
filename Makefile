@@ -2,7 +2,7 @@
 
 
 dirs = src/corva_unit_converter tests
-coverage_report_params = --precision=2 --fail-under=90
+coverage_report_params = --precision=2 --fail-under=94
 
 ## help: Show this help.
 .PHONY: help
@@ -24,7 +24,7 @@ install:
 lint:
 	@flake8 --max-line-length 100 $(dirs)
 	@isort --check-only --quiet --profile black $(dirs)
-	@mypy --check-untyped-defs --scripts-are-modules $(dirs)
+	@mypy --check-untyped-defs --scripts-are-modules --explicit-package-bases $(dirs)
 
 ## test: Run tests and show code coverage.
 .PHONY: test
