@@ -10,6 +10,17 @@ metric = {
             "N"
         ]
     },
+    "kN": {
+        "name": {
+            "singular": "Kilonewton",
+            "plural": "Kilonewtons",
+            "display": "kN"
+        },
+        "to_anchor": 1000,
+        "aliases": [
+            "kN"
+        ]
+    },
     "daN": {
         "name": {
             "singular": "Dekanewton",
@@ -31,7 +42,18 @@ metric = {
         "aliases": [
             "kdaN"
         ]
-    }
+    },
+    "TONNEf": {
+        "name": {
+            "singular": "Ton Force (metric)",
+            "plural": "Ton Force (metric)",
+            "display": "TONNEf"
+        },
+        "to_anchor": 1000 * g,
+        "aliases": [
+            "TONNEf"
+        ]
+    },
 }
 
 imperial = {
@@ -55,6 +77,28 @@ imperial = {
         "to_anchor": 1000,
         "aliases": [
             "klbf"
+        ]
+    },
+    "TONf US": {
+        "name": {
+            "singular": "Ton Force (short)",
+            "plural": "Ton Force (short)",
+            "display": "TONf US"
+        },
+        "to_anchor": 2000,
+        "aliases": [
+            "TONf US"
+        ]
+    },
+    "TONf(long)": {
+        "name": {
+            "singular": "Ton Force (long)",
+            "plural": "Ton Force (long)",
+            "display": "TONf(long)"
+        },
+        "to_anchor": 2240,
+        "aliases": [
+            "TONf(long)"
         ]
     }
 }
