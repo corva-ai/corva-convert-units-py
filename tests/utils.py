@@ -1,6 +1,6 @@
 import math
 
-from corva_unit_converter.converter import Converter
+from src.corva_unit_converter.converter import Converter
 
 
 def convert_units(cases: list):
