@@ -45,11 +45,13 @@ rule = {
    "_anchors": {
       "metric": {
          "unit": "C",
-         "transform": lambda c: c / (5 / 9) + 32
+         "transform": lambda c: c / (5 / 9) + 32,
+         "ratio": 1
       },
       "imperial": {
          "unit": "F",
-         "transform": lambda f: (f - 32) * (5 / 9)
+         "transform": lambda f: (f - 32) * (5 / 9),
+         "ratio": 1
       }
    }
 }

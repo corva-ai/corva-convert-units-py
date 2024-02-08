@@ -76,9 +76,6 @@ class Converter:
         result = value * origin["unit"]["to_anchor"]
 
         # for some units it's a simple shift (e.g. C to K)
-        if "anchor_shift" in destination["unit"]:
-            result += destination["unit"]["anchor_shift"]
-
         if "anchor_shift" in origin["unit"]:
             result -= origin["unit"]["anchor_shift"]
 
@@ -87,9 +84,14 @@ class Converter:
             # Convert through transformation
             transform = measures[origin["measure"]]["_anchors"][origin["system"]].get("transform")
             if transform and callable(transform):
-                return transform(result)
+                result = transform(result)
+
             # Convert through the anchor ratio
             result *= measures[origin["measure"]]["_anchors"][origin["system"]]["ratio"]
+
+        # Apply shift after transformation for F to K
+        if "anchor_shift" in destination["unit"]:
+            result += destination["unit"]["anchor_shift"]
 
         # Convert to another unit inside the destination system
         return result / destination["unit"]["to_anchor"]
