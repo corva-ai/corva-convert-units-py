@@ -3,7 +3,7 @@ name: CI
 on: push
 
 jobs:
-  pre-package:
+  test-and-lint:
     name: Run Lint and Pytest
     if: github.ref != 'refs/heads/develop' && !contains(github.ref, 'release/') && !contains(github.ref, 'tags/v')
     runs-on: ubuntu-latest
@@ -35,3 +35,30 @@ jobs:
 
       - name: Coverage report
         run: make coverage
+  deploy:
+    name: Build and publish to PyPI
+
+    needs: [ test-and-lint ]
+
+    if: contains(github.ref, 'tags/v')
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: pip install -U setuptools wheel
+
+      - name: Build the package
+        run: python setup.py sdist bdist_wheel
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.4.2
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}

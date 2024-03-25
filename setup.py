@@ -34,5 +34,5 @@ setuptools.setup(
     package_dir={"": "src"},
     install_requires=[],
     python_requires='>=3.8, <4.0',
-    license='The Unlicense',
+    license='MIT',
 )
