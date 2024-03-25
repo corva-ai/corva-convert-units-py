@@ -5,7 +5,7 @@ on: push
 jobs:
   test-and-lint:
     name: Run Lint and Pytest
-    if: github.ref != 'refs/heads/develop' && !contains(github.ref, 'release/') && !contains(github.ref, 'tags/v')
+    if: github.ref != 'refs/heads/develop' && contains(github.ref, 'release/') && contains(github.ref, 'tags/v')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
