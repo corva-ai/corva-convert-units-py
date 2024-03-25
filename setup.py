@@ -21,18 +21,20 @@ CLASSIFIERS = [
 ]
 
 setuptools.setup(
-    name='corva-unit-converter',
+    name="corva-unit-converter",
     author="Yuliya Klimushina",
     author_email="yuliya.klimushina@corva.ai",
-    url='https://github.com/corva-ai/corva-convert-units-py',
+    url="https://github.com/corva-ai/corva-convert-units-py",
     version=VERSION,
     classifiers=CLASSIFIERS,
-    description='SDK for building Corva DevCenter Python apps.',
-    keywords='corva, unit converter',
-    py_modules=[file.stem for file in pathlib.Path('src').glob('*.py')],
+    description="Unit converter for O&G(and other) units",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    keywords="corva, unit converter",
+    py_modules=[file.stem for file in pathlib.Path("src").glob("*.py")],
     packages=setuptools.find_packages("src"),
     package_dir={"": "src"},
     install_requires=[],
-    python_requires='>=3.8, <4.0',
-    license='MIT',
+    python_requires=">=3.8, <4.0",
+    license="MIT",
 )
