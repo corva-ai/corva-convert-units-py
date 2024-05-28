@@ -38,7 +38,7 @@ angle = {
       "name": {
          "singular": "arcminute",
          "plural": "arcminutes",
-         "display": "acrmin"
+         "display": "arcmin"
       },
       "to_anchor": 1/60,
       "aliases": [
