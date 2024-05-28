@@ -13,7 +13,8 @@ metric = {
         },
         "to_anchor": 60,
         "aliases": [
-            "1/s"
+            "1/s",
+            "Hz"
         ]
     },
     "rev/s": {
