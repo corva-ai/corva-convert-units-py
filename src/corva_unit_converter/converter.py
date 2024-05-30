@@ -62,7 +62,7 @@ class Converter:
         return definition
 
     def convert(self, unit_from: str, unit_to: str,  # noqa: CCR001, CFQ004
-                value: Union[int, float], measure: str = None):
+                value: Union[int, float], measure: Union[str, None] = None):
         """Main function"""
         if measure is not None and measure not in measures:
             invalid_measure_msg = (
