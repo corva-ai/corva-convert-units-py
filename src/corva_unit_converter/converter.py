@@ -10,11 +10,11 @@ measures = {
     "angular_velocity": definitions.angular_velocity.rule,
     "area": definitions.area.rule,
     "density": definitions.density.rule,
-    "energy": definitions.torque.rule,
+    "energy": definitions.energy.rule,
     "force": definitions.force.rule,
     "gas_concentration": definitions.gas_concentration.rule,
-    "gas_volume": definitions.inverse_pressure.rule,
-    "inverse_pressure": definitions.gas_volume.rule,
+    "gas_volume": definitions.gas_volume.rule,
+    "inverse_pressure": definitions.inverse_pressure.rule,
     "length": definitions.length.rule,
     "length_per_angle": definitions.length_per_angle.rule,
     "mass": definitions.mass.rule,
@@ -52,20 +52,30 @@ class Converter:
         self.origin = {}
         self.destination = {}
 
-    def get_unit_definition(self, source, unit):
+    def get_unit_definition(self, source, unit, measure):
         definition = source.get(unit)
         if not definition:
-            definition = self.get_unit(unit)
+            definition = self.get_unit(unit, measure)
             if not definition:
                 logging.info(f"{unit=} not found")
                 return
         return definition
 
     def convert(self, unit_from: str, unit_to: str,  # noqa: CCR001, CFQ004
-                value: Union[int, float]):
+                value: Union[int, float], measure: Union[str, None] = None):
         """Main function"""
-        origin = self.get_unit_definition(source=self.origin, unit=unit_from)
-        destination = self.get_unit_definition(source=self.destination, unit=unit_to)
+        if measure is not None and measure not in measures:
+            invalid_measure_msg = (
+                f"Invalid measure: {measure}. "
+                f"Available measures are: {list(measures.keys())}"
+            )
+            logging.info(invalid_measure_msg)
+            return
+
+        origin = self.get_unit_definition(source=self.origin,
+                                          unit=unit_from, measure=measure)
+        destination = self.get_unit_definition(source=self.destination,
+                                               unit=unit_to, measure=measure)
 
         if not origin or not destination:
             return
@@ -99,8 +109,13 @@ class Converter:
         return result / destination["unit"]["to_anchor"]
 
     @staticmethod
-    def get_unit(abbr) -> Dict:  # noqa: CCR001
-        for measure, systems in measures.items():
+    def get_unit(abbr, measure) -> Dict:  # noqa: CCR001
+        if measure and measure in measures:
+            search_measures = {measure: measures[measure]}
+        else:
+            search_measures = measures
+
+        for curr_measure, systems in search_measures.items():
             for system, units in systems.items():
                 if system == "_anchors":
                     break
@@ -109,8 +124,13 @@ class Converter:
                     if test_abbr == new_abbr:
                         return {
                             "abbr": new_abbr,
-                            "measure": measure,
+                            "measure": curr_measure,
                             "system": system,
                             "unit": unit
                         }
         return {}
+
+    @staticmethod
+    def get_measures():
+        """Returns a list of available measures."""
+        return list(measures.keys())
