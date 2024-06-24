@@ -14,6 +14,7 @@ measures = {
     "force": definitions.force.rule,
     "gas_concentration": definitions.gas_concentration.rule,
     "gas_volume": definitions.gas_volume.rule,
+    "gamma_radiation": definitions.gamma_radiation.rule,
     "inverse_pressure": definitions.inverse_pressure.rule,
     "length": definitions.length.rule,
     "length_per_angle": definitions.length_per_angle.rule,

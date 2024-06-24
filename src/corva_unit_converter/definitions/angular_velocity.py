@@ -25,7 +25,8 @@ metric = {
         },
         "to_anchor": 60,
         "aliases": [
-            "rev/s"
+            "rev/s",
+            "rps"
         ]
     },
     "rpm": {
@@ -36,7 +37,8 @@ metric = {
         },
         "to_anchor": 1,
         "aliases": [
-            "rpm"
+            "rpm",
+            "rev/m"
         ]
     },
     "rph": {
@@ -47,7 +49,8 @@ metric = {
         },
         "to_anchor": 1 / 60,
         "aliases": [
-            "rph"
+            "rph",
+            "rev/h"
         ]
     },
     "radsec": {
