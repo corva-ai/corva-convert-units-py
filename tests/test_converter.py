@@ -11,7 +11,7 @@ def test_get_measures_returns_correct_keys():
     expected_keys = [
         "acoustic_slowness", "angle", "angle_per_length", "angular_velocity",
         "area", "density", "energy", "force", "gas_concentration",
-        "gas_volume", "inverse_pressure", "length", "length_per_angle",
+        "gas_volume", "gamma_radiation", "inverse_pressure", "length", "length_per_angle",
         "mass", "mass_flow_rate", "mpl", "porosity", "power", "pressure",
         "pressure_gradient", "proportion", "revolution_per_volume", "speed",
         "strokes_rate", "temperature", "time", "torque",
