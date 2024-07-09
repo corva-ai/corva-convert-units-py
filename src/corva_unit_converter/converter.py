@@ -34,6 +34,8 @@ measures = {
     "torque": definitions.torque.rule,
     "volume_concentration": definitions.volume_concentration.rule,
     "volume_flow_rate": definitions.volume_flow_rate.rule,
+    "voltage": definitions.voltage.rule,
+    "viscosity": definitions.viscosity.rule
 }
 
 

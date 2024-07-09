@@ -21,7 +21,12 @@ metric = {
             "plural": "Millilitres",
             "display": "ml"
         },
-        "to_anchor": 1 / 1000000
+        "to_anchor": 1 / 1000000,
+        "aliases":  [
+            "mL",
+            "ml of",
+            "mL of"
+        ]
     },
     "cl": {
         "name": {
@@ -177,7 +182,10 @@ imperial = {
             "plural": "Gallons",
             "display": "gal"
         },
-        "to_anchor": 0.000133
+        "to_anchor": 0.000133,
+        "aliases":  [
+            "gals",
+        ]
     },
     "ft3": {
         "name": {
@@ -201,7 +209,10 @@ imperial = {
             "plural": "Oil barrels",
             "display": "bbl"
         },
-        "to_anchor": 0.0056
+        "to_anchor": 0.0056,
+        "aliases":  [
+            "bbls",
+        ]
     },
     "Mscf": {
         "name": {

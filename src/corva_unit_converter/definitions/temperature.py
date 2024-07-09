@@ -8,7 +8,9 @@ metric = {
       "to_anchor": 1,
       "anchor_shift": 0,
       "aliases": [
-         "degc"
+         "degc",
+         "degC",
+         "°C"
       ]
    },
    "K": {
@@ -34,7 +36,10 @@ imperial = {
       },
       "to_anchor": 1,
       "aliases": [
-         "degf"
+         "degf",
+         "degF",
+         "°F",
+         "deg/F"
       ]
    }
 }

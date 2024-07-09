@@ -52,7 +52,9 @@ metric = {
         },
         "to_anchor": 1,
         "aliases": [
-            "%"
+            "%",
+            "%%",
+            "% by vol"
         ]
     },
     "ppm": {
