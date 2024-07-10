@@ -163,6 +163,18 @@ metric = {
       "aliases": [
          "km3/s"
       ]
+   },
+   "ml/30min": {
+      "name": {
+         "singular": "Millilitre per 30 Minutes",
+         "plural": "Millilitres per 30 Minutes",
+         "display": "ml/30min"
+      },
+      "to_anchor": 1/1800000,
+      "aliases": [
+         "ml/30min",
+         "mL/30 min"
+      ]
    }
 }
 

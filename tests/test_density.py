@@ -26,6 +26,10 @@ cases = [
      "measure": 'density'},
     {"from": "ppg", "amount": 1, "to": "lb/in3", "expected": 0.00432900442862808,
      "measure": 'density'},
+    {"from": "mg/l", "amount": 1, "to": "lb/bbl", "expected": 0.000350507,
+     "measure": 'density'},
+    {"from": "lb/bbl", "amount": 1, "to": "mg/l", "expected": 2853.0095238095237,
+     "measure": 'density'},
     # {"from": "lb/Mgal", "amount": 1, "to": "kg/m3", "expected": 119826.4},
     # {"from": "kg/m3", "amount": 1, "to": "lb/Mgal", "expected": 8.3454e-06}
 ]

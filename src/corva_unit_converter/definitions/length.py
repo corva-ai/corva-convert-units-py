@@ -63,7 +63,7 @@ imperial = {
             'display': 'ft'
         },
         'to_anchor': 1,
-        'aliases': ['f', 'ft', "'", 'feet'],
+        'aliases': ['f', 'ft', "'", 'feet', "ftUS"],
     },
     'mi': {
         'name': {
@@ -73,6 +73,15 @@ imperial = {
         },
         'to_anchor': 5280,
         'aliases': ['mi'],
+    },
+    '32nd': {
+        'name': {
+            'singular': '1/32 part of an Inch',
+            'plural': '32 parts of an Inch',
+            'display': '¹/₃₂ part of an Inch'
+        },
+        'to_anchor': 1 / 384,
+        'aliases': ['32nd', "32nd in", "in/32"],
     }
 }
 

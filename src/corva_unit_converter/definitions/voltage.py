@@ -20,6 +20,17 @@ voltage = {
       "aliases": [
          "mV"
       ]
+   },
+   "nV": {
+      "name": {
+         "singular": "Nanovolt",
+         "plural": "Nanovolts",
+         "display": "nV"
+      },
+      "to_anchor": 1/1000000,
+      "aliases": [
+         "nV"
+      ]
    }
 }
 

@@ -31,6 +31,7 @@ from . import (
     temperature,
     time,
     torque,
+    viscosity,
     voltage,
     volume_concentration,
     volume_flow_rate,
@@ -71,5 +72,6 @@ __all__ = [
     "torque",
     "voltage",
     "volume_concentration",
-    "volume_flow_rate"
+    "volume_flow_rate",
+    "viscosity"
 ]

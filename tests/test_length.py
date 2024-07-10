@@ -11,6 +11,8 @@ cases = [
    {"from": "mi", "amount": 1, "to": "km", "expected": 1.609343502101154},
    {"from": "in", "amount": 1, "to": "mm", "expected": 25.4},
    {"from": "mm", "amount": 1, "to": "in", "expected": 0.0393701},
+   {"from": "32nd", "amount": 1, "to": "mm", "expected": 0.7937499746000007},
+   {"from": "mm", "amount": 1, "to": "32nd", "expected": 1.25984256},
 ]
 
 

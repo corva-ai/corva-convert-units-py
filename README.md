@@ -33,6 +33,12 @@ Metric to metric:
     mass_grams = converter.convert(unit_from="kg", unit_to="g", value=1)
 
 
+# Contribution
+
+1. Cover your changes with unit tests.
+2. Bump version in src/version.py if you want your changes to be released.
+
+
 # Testing
 
 1. Create virtualenv via your favourite tool, for example 

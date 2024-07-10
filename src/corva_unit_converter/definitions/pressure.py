@@ -153,7 +153,11 @@ imperial = {
         },
         "to_anchor": ((1 / 144) / 100000),
         "aliases": [
-            "hsf"
+            "hsf",
+            "lbf/100 ft2",
+            "lbf/100ft2",
+            "lbf/(100·ft²)",
+            "lb/100ft2"
         ]
     }
 }

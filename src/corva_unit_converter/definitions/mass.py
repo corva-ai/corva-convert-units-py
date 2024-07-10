@@ -76,7 +76,8 @@ imperial = {
       },
       "to_anchor": 1,
       "aliases": [
-         "lb"
+         "lb",
+         "lbs"
       ]
    }
 }

@@ -15,7 +15,7 @@ def test_get_measures_returns_correct_keys():
         "mass", "mass_flow_rate", "mpl", "porosity", "power", "pressure",
         "pressure_gradient", "proportion", "revolution_per_volume", "speed",
         "strokes_rate", "temperature", "time", "torque",
-        "volume_concentration", "volume_flow_rate"
+        "volume_concentration", "volume_flow_rate", "viscosity", "voltage"
     ]
 
     assert sorted(result) == sorted(expected_keys)

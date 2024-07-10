@@ -70,7 +70,19 @@ metric = {
             "gm/3",
             "gm/c"
         ]
-    }
+    },
+    "mg/l": {
+        "name": {
+            "singular": "Milligram per Liter",
+            "plural": "Milligrams per Liter",
+            "display": "mg/l"
+        },
+        "to_anchor": 1 / 1000000,
+        "aliases": [
+            "mg/l",
+            "mg/L"
+        ]
+    },
 }
 
 imperial = {
@@ -82,7 +94,10 @@ imperial = {
         },
         "to_anchor": 1,
         "aliases": [
-            "lb/gal"
+            "lb/gal",
+            "lbm/gal",
+            "lbm/galUS",
+            "lbs/galUS"
         ]
     },
     # https://glossary.slb.com/en/terms/p/ppg
@@ -109,7 +124,8 @@ imperial = {
         },
         "to_anchor": 1 / 1000,
         "aliases": [
-            "lb/Mgal"
+            "lb/Mgal",
+            "lbm/Mgal"
         ]
     },
     "lb/ft3": {
@@ -135,7 +151,19 @@ imperial = {
         "aliases": [
             "lb/in3"
         ]
-    }
+    },
+    "lb/bbl": {
+        "name": {
+            "singular": "Pound Per Barrel",
+            "plural": "Pounds Per Barrel",
+            "display": "lb/bbl"
+        },
+        "to_anchor": 1 / 42,
+        "aliases": [
+            "lb/bbl",
+            "lbm/bbl",
+        ],
+    },
 }
 
 rule = {
